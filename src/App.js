@@ -1,24 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
+import Navbar from './Components/Navbar';
+import Card from './Components/Card';
 import './App.css';
+import Customer from './Components/Customer';
 
 function App() {
+
+  const [isLoggedIn, setIsLoggedIn]= React.useState(false);
+  // isLoggedIn= false, initially the user is not logged in 
+  //later when the user logs in we need to set the setIsLoggedIn to true (see /Components/Login)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <div>
+      <Navbar data={setIsLoggedIn} initial={isLoggedIn}/>
+      <Customer/>    
+   </div>
   );
 }
 
