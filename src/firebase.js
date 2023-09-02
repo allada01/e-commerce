@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
-import {getAuth, GoogleAuthProvider} from 'firebase/auth';
+import {getAuth, GoogleAuthProvider, signInWithPopup} from 'firebase/auth';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDkSjlzHaCtBtHJ-JGa1sp6Qqo0ng6tgGM",
@@ -21,3 +21,12 @@ export const mydb= firebase.firestore();    // helps to connect to firestore db
 
 export const auth= getAuth(app) // authentification
 export const provider= new GoogleAuthProvider() //Google Authentification  // if you want to create an object of a class we use 'new' keyword
+
+export const signInWithGoogle = ()=>{
+  signInWithPopup(auth, provider).then((result) => {
+    console.log(result);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+}
