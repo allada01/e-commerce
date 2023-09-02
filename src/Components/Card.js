@@ -60,7 +60,7 @@ function Card() {
                 console.log(cartData);
 
             }
-            cartData= cartData + "<a class='btn btn-success' href='summary.html'>Continue</a>"
+            cartData= cartData + "<a class='btn btn-success' href= 'summary.html'>Continue</a>"
             document.getElementById('myPopover').setAttribute('data-content',cartData);     //because in popover whatever was in data-content that is replaced by cardData (see Popover button in Navbar)
             // for(let [k,v] of Object.entries(mycart)){ if you use for of you will get an error "mycart not iterable"
             //     console.log(`${k} ${v}`);        DIFFICULT TO USE 'FOR OF' ON OBJECTS
