@@ -4,7 +4,7 @@ import React from 'react';
 // Put any other imports below so that CSS from your
 // components takes precedence over default styles.
 
-import {HashRouter, BrowserRouter, Link, Route, Routes} from 'react-router-dom';
+import {BrowserRouter, Link, Route, Routes} from 'react-router-dom';
 import AddProduct from './AddProduct';
 import Login from './Login';
 import Card from './Card';
@@ -28,7 +28,7 @@ function Navbar(props) {        //props will contain data={setIsLoggedIn} initia
     }
 
     return (
-        <HashRouter>
+        <BrowserRouter>
              <div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container-fluid">
@@ -98,7 +98,7 @@ function Navbar(props) {        //props will contain data={setIsLoggedIn} initia
         </Routes>
 
         
-        </HashRouter>
+        </BrowserRouter>
        
     )
 
